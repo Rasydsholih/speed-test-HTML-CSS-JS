@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+    <style>
+        .button {
+            width: 30%;
+            height: 50px;
+            background-color: aquamarine;
+            
+        }
+
+        .alert {
+            width: 50%;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+<body>
+    <button id="alertButton" class="button"> Munculkan Alert</button>
+    <div id="alertBox" class="alert"></div>
+
+
+    <script>
+        const button = document.getElementById('alertButton');
+        const alertBox = document.getElementById('alertBox');
+ 
+        button.addEventListener('click', function() {
+            let countdown = 5;
+            alertBox.style.display = 'block';
+            alertBox.textContent = `DANGER! Alert akan tertutup dalam ${countdown}`;
+
+            const interval = setInterval(function() {
+                countdown--;
+                if (countdown > 0) {
+                    alertBox.textContent = `DANGER! Alert akan tertutup dalam ${countdown}`;
+                } else {
+                    clearInterval(interval);
+                    alertBox.style.display = 'none';
+                }
+            }, 1000);
+        });
+    </script>
+    
+</body>
+</html>

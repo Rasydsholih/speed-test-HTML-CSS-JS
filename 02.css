@@ -1,0 +1,69 @@
+ul {
+    display: flex;
+    
+}
+
+
+a {
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+}
+
+li{
+    color: black;
+    font-size: 15px;
+    font-family: monospace;
+    text-decoration: none;
+}
+
+main {
+    justify-content: center;
+    align-items: center;
+}
+
+.atas {
+    width: 95%;
+    height: 500px;
+    background-color: rgb(153, 165, 168);
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.halaman1 {
+    position: relative;
+    left: 10px;
+    top: 20px;
+}
+
+.halaman1 p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.halaman1 img {
+    width: 600px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.halaman1 a {
+    text-decoration: none;
+    position: relative;
+
+}
+
+.bintang {
+    position: relative;
+    bottom: 30px;
+}
+
+
+.coment {
+    position: relative;
+    bottom: 70px;
+}

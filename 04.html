@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <div class="container">
+        <label for="image-select">Pilih Gambar:</label>
+        <select id="image-select">
+            <option value="download.jpeg">Gambar 1</option>
+            <option value="pulau.jpeg">Gambar 2</option>
+            <option value="rajaampat.jpeg">Gambar 3</option>
+        </select>
+
+        <label for="opacity-select">Pilih Opacity:</label>
+        <select id="opacity-select">
+            <option value="1">1 (Penuh)</option>
+            <option value="0.5">0.5 (50%)</option>
+            <option value="0.2">0.2 (20%)</option>
+        </select>
+    </div>
+
+    <div class="image-container">
+        <img id="displayed-image" src="download.jpeg" alt="Selected Image">
+    </div>
+
+    <script>
+        
+        const imageSelect = document.getElementById('image-select');
+        const opacitySelect = document.getElementById('opacity-select');
+        const displayedImage = document.getElementById('displayed-image');
+
+        
+        function updateImage() {
+            const selectedImage = imageSelect.value;
+            const selectedOpacity = opacitySelect.value;
+
+            
+            displayedImage.src = selectedImage;
+            displayedImage.style.opacity = selectedOpacity;
+        }
+
+        
+        imageSelect.addEventListener('change', updateImage);
+        opacitySelect.addEventListener('change', updateImage);
+    </script>
+    
+</body>
+</html>

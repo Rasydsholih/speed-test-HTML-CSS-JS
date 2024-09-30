@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Mencari data</h2>
+        <form id="searchForm">
+            <input type="text"  id="searchInput" placeholder="Search...">
+            <button class="btn btn-outline-dark" type="submit">submit</button>
+        </form>
+
+        <div class="output" id="output"></div>
+
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var inputText = document.getElementById("searchInput").value.trim(); 
+            if (inputText === "") {
+                document.getElementById("output").textContent = "Tidak mencari data";
+            } else {
+                document.getElementById("output").textContent = "Mencari data : " + inputText;
+            }
+        });
+    </script>
+</body>
+</html>
